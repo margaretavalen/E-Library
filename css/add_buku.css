@@ -1,0 +1,55 @@
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+
+#login{
+  cursor: pointer;
+  background: #1d1b31;
+  align-items: center;
+  margin-top: -5px;
+  font-size: 20px;
+}
+
+.sidebar.open ~ .content .tambahbuku {
+  left: 250px;
+  width: calc(100% - 250px);
+}
+
+.tambahbuku{
+  position: relative;
+  background: #E4E9F7;
+  min-height: 100vh;
+  top: 0;
+  left: 78px;
+  width: calc(100% - 78px);
+  transition: all 0.5s ease;
+  z-index: 2;
+  display: inline-block;
+  color: #11101d;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+#hasil{
+  font-size: 15px;
+  color: #1d1b31;
+  align-items: center;
+}
+
+@media (max-width: 420px) {
+  .sidebar li .tooltip{
+    display: none;
+  }
+}
+
+/* Footer  */
+
+#sticky-footer {
+  background-color: #1d1b31;
+}

@@ -1,0 +1,212 @@
+<?php
+session_start(); //inisialisasi session
+
+if (!isset($_SESSION['username'])) {
+  header("Location: login.php");
+}
+?>
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>E-Library</title>
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="" />
+
+  <!-- Facebook and Twitter integration -->
+  <meta property="og:title" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:description" content="" />
+  <meta name="twitter:title" content="" />
+  <meta name="twitter:image" content="" />
+  <meta name="twitter:url" content="" />
+  <meta name="twitter:card" content="" />
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="css/animate.css">
+  <!-- Icomoon Icon Fonts-->
+  <link rel="stylesheet" href="css/icomoon.css">
+  <!-- Bootstrap  -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <!-- Flexslider  -->
+  <link rel="stylesheet" href="css/flexslider.css">
+  <!-- Flaticons  -->
+  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+  <!-- Owl Carousel -->
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <!-- Theme style  -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Modernizr JS -->
+  <script src="js/modernizr-2.6.2.min.js"></script>
+  <!-- FOR IE9 below -->
+  <!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+
+<body>
+  <div id="colorlib-page">
+    <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+    <aside id="colorlib-aside" role="complementary" class="border js-fullheight">
+      <h1 id="colorlib-logo"><a href="index.php">E-Library</a></h1>
+      <nav id="colorlib-main-menu" role="navigation">
+        <ul>
+          <li><a href="home_user.php">Home</a></li>
+          <li><a href="rules_user.php">Rules</a></li>
+          <li><a href="book_user.php">Book</a></li>
+          <li><a href="listbukupinjam.php">Book List</a></li>
+          <li><a href="about_user.php">About</a></li>
+          <li class="colorlib-active"><a href="blog_user.php">Blog</a></li>
+          <li><a href="contact_user.php">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="colorlib-footer">
+        <a href="logout.php" style="color: grey;">Log Out</a>
+        <p><small>&copy; Copyright &copy;
+            <script>
+              document.write(new Date().getFullYear());
+            </script> Made by Margareta Valencia
+          </small></p>
+      </div>
+
+    </aside>
+
+    <div id="colorlib-main">
+
+      <div class="colorlib-blog">
+        <div class="colorlib-narrow-content">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+              <span class="heading-meta">Blog</span>
+              <h2 class="colorlib-heading">Read Blog</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 col-sm-12 animate-box" data-animate-effect="fadeInLeft" id="blog1">
+              <div class="blog-entry">
+                <a href="blog_user.php" class="blog-img"><img src="images/percyjackson.jpg" class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a>
+                <div class="desc">
+                  <span><small>May 06, 2023 </small> | <small> Fantasy </small> </span>
+                  <h3><a href="blog_user.php">Rick Riordan Penulis Novel Percy Jackson and The Olympians</a></h3>
+                  <p>Rick memang penulis yang dekat dengan anak-anak. Suatu hari dia pun memutuskan menulis untuk
+                    anak-anak. ”Saat itu Haley sedang mempelajari mitologi Yunani di kelas dua. Sebelum tidur, dia
+                    meminta saya mendongeng tentang para dewa dan pahlawan. Saya telah mengajar mitologi Yunani tingkat
+                    SMP selama bertahun-tahun, jadi saya senang-senang saja. Ketika saya kehabisan cerita tentang
+                    mitos-mitos tersebut, Haley kecewa dan meminta saya untuk mengarang cerita baru menggunakan
+                    tokoh-tokoh yang sama.”</p>
+                  <p>Ketika itu, Haley baru saja didiagnosis mengidap ADHD (Attention Deficit Hyperactivity Disorder),
+                    suatu kondisi yang menyebabkan pengidapnya sulit memusatkan perhatian, dan disleksia. Karena
+                    termotivasi dengan permintaan putranya, Rick pun mengarang seorang tokoh bernama Percy Jackson yang
+                    memiliki misi untuk mengembalikan petir Zeus. Butuh tiga malam bagi Rick menceritakan keseluruhan
+                    kisahnya. Ketika cerita tersebut tamat, Haley memberi usul kepada ayahnya untuk menuangkannya ke
+                    dalam sebuah buku.</p>
+                  <p>“Menciptakan Percy sebagai tokoh yang mengidap ADHD dan disleksia merupakan cara saya dalam memberi
+                    penghargaan terhadap potensi yang dimiliki semua anak dengan kondisi serupa,” kata Rick. </p>
+                  <p>Rick pun menyelipkan pesan mulia di dalam seri Percy Jackson. “Menjadi beda itu bukan sesuatu yang
+                    buruk. Terkadang, perbedaan itu justru merupakan tanda bahwa si anak benar-benar berbakat. Itulah
+                    yang disadari Percy mengenai dirinya sendiri dalam The Lightning Thief.”</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-12 animate-box" data-animate-effect="fadeInLeft" id="blog2">
+              <div class="blog-entry">
+                <a href="blog_user.php" class="blog-img"><img src="images/sherlockholmes.jpeg" class="img-responsive" alt="picture"></a>
+                <div class="desc">
+                  <span><small>May 07, 2023 </small> | <small> Action </small></span>
+                  <h3><a href="blog_user.php">Arthur Conan Doyle, sosok penulis dibalik novel Sherlock Holmes</a></h3>
+                  <p>Doyle sempat bekerja sebagai dokter di Greenland Hope of Peterhead pada tahun 1880 dan sebagai ahli
+										bedah untuk kapal SS Mayumba setelah ia lulus dan mendapat gelar M.B, C.M. Doyle menghabiskan waktu
+										selama hampir satu tahun bekerja sebagai dokter di kapal tersebut dan berkeliling ke seluruh dunia.
+									</p>
+									<p>
+										Saat kembali ke Inggris, pada 1882 Conan membuka praktek kedokteran di Southsea yang terletak di
+										daerah pantai di bagian selatan Inggris. Awalnya kehidupan Conan Doyle sangat susah karena dia hanya
+										memiliki sangat sedikit pasien dan dia harus bekerja keras untuk memperoleh uang guna membiayai
+										hidupnya. Apalagi di tahun 1885, Doyle menikahi Mary Louise Hawkins. Tentunya banyak kebutuhan yang
+										harus ia penuhi untuk menghidupi keluarganya.
+									</p>
+									<p>Saat kekurangan uang inilah, ia pun berinisiatif untuk menulis sebuah cerita yang lebih baik
+										daripada cerita-cerita yang pernah ia buat sebelumnya. Doyle akhirnya terinspirasi untuk mencoba
+										membuat cerita tentang karakter seorang detektif setelah
+										ia membaca beberapa cerita detektif C. Auguste Dupin karangan Edgar Allan Poe dan M. Lecoq karangan
+										Émile Gaboriau. Namun berbeda dengan cerita kedua detektif di atas, Doyle ingin mencoba menciptakan
+										karakter yang mengerti tentang ilmu forensik dan kedokteran serta memiliki kemampuan deduksi
+										layaknya dosennya sekaligus mentornya semasa ia kuliah, Dr. Joseph Bell.</p>
+									<p>Ia memadukan kemampuan Dr. Joseph Bell dengan dua tokoh karakter tersebut. Kisah Dupin yang
+										memiliki gaya tulisan naratif dari kacamata seorang tokoh asisten tersebut diadopsi oleh Conan Doyle
+										dalam mengisahkan tokohnya. Selain itu, kemampuan observasi yang mendalam seperti di cerita Dupin
+										dipadukan dengan kemampuan menyamar ala Lecoq. Doyle kemudian memberi nama sang detektifnya Sherlock
+										Holmes, setelah beberapa kali mengganti nama. Mulai dari Sheriddan Hope, Sherringford Holmes, sampai
+										akhirnya menjadi Sherlock Holmes. Termasuk nama Ormond Sacker yang akhirnya diganti dengan nama Dr.
+										John Watson, sahabat dan kolega dari sang detektif tersebut.</p>
+									<p>
+										Sherlock Holmes akhirnya dimunculkan dalam novelnya berjudul “A Study In Scarlet”, yang sebelumnya
+										sempat diberi nama “A Tangled Skein”. Awalnya Doyle menulis kisah ini pada tahun 1886. Cerita ini
+										diberikan kepada Ward Lock & Co pada tanggal 20 November 1886, dan dibayar seharga £25. Cerita ini
+										baru diterbitkan dan dimuat dalam Beeton’s Christmas Annual pada akhir tahun 1887.
+									</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="get-in-touch" class="colorlib-bg-color">
+            <div class="colorlib-narrow-content">
+              <div class="row">
+                <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+                  <h2>Get in Touch!</h2>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+                  <p class="colorlib-lead">If you need something, you can contact here</p>
+                  <p><a href="contact.html" class="btn btn-primary btn-learn">Contact me!</a></p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- jQuery -->
+      <script src="js/jquery.min.js"></script>
+      <!-- jQuery Easing -->
+      <script src="js/jquery.easing.1.3.js"></script>
+      <!-- Bootstrap -->
+      <script src="js/bootstrap.min.js"></script>
+      <!-- Waypoints -->
+      <script src="js/jquery.waypoints.min.js"></script>
+      <!-- Flexslider -->
+      <script src="js/jquery.flexslider-min.js"></script>
+      <!-- Sticky Kit -->
+      <script src="js/sticky-kit.min.js"></script>
+      <!-- Owl carousel -->
+      <script src="js/owl.carousel.min.js"></script>
+      <!-- Counters -->
+      <script src="js/jquery.countTo.js"></script>
+
+
+      <!-- MAIN JS -->
+      <script src="js/main.js"></script>
+
+</body>
+
+</html>
